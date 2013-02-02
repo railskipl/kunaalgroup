@@ -65,7 +65,7 @@
          <div class="wrapper">
             <div class="col-1">
                <h4>More information</h4>
-                <p><%= truncate(Blog.find_by_id(1).description, :length => 200).html_safe %></p>
+                <p><%= truncate(Blog.find(1).description, :length => 200).html_safe %></p>
                
               <div class="wrapper"><a href="/blogs/1" class="button">Read More <img src="/assets/arrow.png" alt="" class="rmarrow" /></a></div>
                   
@@ -73,18 +73,18 @@
         <div class="col-2">
                <h3>Latest News</h3>
                <ul class="news">
-                  <li><strong><%=get_month(Latestinformation.find_by_id(1).published_on.month) %>
-                  	<span><%= Latestinformation.find_by_id(1).published_on.day %></span></strong>
+                  <li><strong><%=get_month(Latestinformation.find(1).published_on.month) %>
+                  	<span><%= Latestinformation.find(1).published_on.day %></span></strong>
                      <div class="extra-wrap">
                         <h5><a href="/latestinformations/1">Read More.</a></h5>
-                        <p><%= truncate(Latestinformation.find_by_id(1).description, :length => 200).html_safe %></p>
+                        <p><%= truncate(Latestinformation.find(1).description, :length => 200).html_safe %></p>
                      </div>
                   </li>
-                  <li style="padding:0"><strong><%=get_month(Latestinformation.find_by_id(2).published_on.month) %>
-                  	<span><%= Latestinformation.find_by_id(2).published_on.day %></span></strong>
+                  <li style="padding:0"><strong><%=get_month(Latestinformation.find(2).published_on.month) %>
+                  	<span><%= Latestinformation.find(2).published_on.day %></span></strong>
                      <div class="extra-wrap">
                         <h5><a href="/latestinformations/2">Read More.</a></h5>
-                         <p><%= truncate(Latestinformation.find_by_id(2).description, :length => 200).html_safe %></p>
+                         <p><%= truncate(Latestinformation.find(2).description, :length => 200).html_safe %></p>
                      </div>
                   </li>
                </ul>
