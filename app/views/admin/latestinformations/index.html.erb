@@ -1,0 +1,32 @@
+<div id="content">
+ 	<p class='button'>
+ 		
+ 		<%= link_to  "Add Latestinformations",new_admin_latestinformation_path, :class => 'button positive' %>
+ 		</p>
+		<p class='clear'></p>
+		   
+
+			<table class="admintable">
+			  <tr class="admintablehd">
+			    <td width="25%">Date</td>
+			    <td width="25%">Description</td>
+			   
+			    <td width="27%" style="text-align: center !important;">Action</td>
+			  </tr>
+			
+			<% @latestinformations.each do |latestinformation| %>
+			  <tr>
+			  	<td><%= latestinformation.published_on%></td>
+			    <td><%= truncate(latestinformation.description, :length => 110).html_safe %> </td>
+			  	
+			  	
+			   <td style="text-align: center !important;"> <%= link_to "Edit", edit_admin_latestinformation_path(latestinformation),:action=>"edit",:id=>latestinformation.id,:class=>'button positive' %> &nbsp;&nbsp; 
+				</td>
+				<td><%=link_to 'Destroy',:action=>"delete",:id=>latestinformation.id , :class=>'button positive'  %></td>
+			     
+			  </tr>
+			<% end %>
+			</table>
+			<br />
+	
+</div>

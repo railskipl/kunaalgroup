@@ -1,0 +1,71 @@
+#main { 
+	width:1200px; 
+	margin:0 auto;
+}
+#header{
+	height:135px;
+}
+#header { border-radius:0 0 10px 10px; background: url(../assets/headerbg.jpg) repeat-x; border:1px solid #e2e2e2;
+}
+#header, 
+#content, 
+#footer { 
+	font-size:12px;
+}
+.col-1, 
+.col-3 { 
+	float:left;
+}
+
+.col-2{
+	float:left;
+}
+
+
+
+.header_row{ width:auto; height:auto; padding:10px 20px; overflow:hidden
+}
+
+.logo{ width:124px; height:68px; float:left}
+
+.social{ width:auto; height:auto; float:right; margin:20px 0 0 20px}
+
+.email{ width:auto; height:auto; float:right; font-size:18px; color:#474749; margin:25px 0 0 0}
+
+.logodiv{ width:auto; height:auto; text-align:center; margin:0 0 20px 0}
+
+/*======= index.html =======*/
+#page1 #content .col-1 { width:840px; margin-right:48px;}
+#page1 #content .col-2 { width:310px;}
+.col-inner { width:100%; height:auto; float:left; margin:20px 0 0 0}
+
+/*======= index-1.html =======*/
+#page2 #content .col-1 { width:584px; margin-right:48px;}
+#page2 #content .col-2 { width:310px;}
+
+/*======= index-2.html =======*/
+#page3 #content .col-1 { width:310px; margin-right:48px;}
+#page3 #content .col-2 { width:584px;}
+
+/*======= index-3.html =======*/
+#page4 #content .col-1 { width:584px; margin-right:48px;}
+#page4 #content .col-2 { width:310px;}
+
+/*======= index-4.html =======*/
+#page5 #content .col-1 { width:584px; margin-right:48px;}
+#page5 #content .col-1 .col-1 { width:269px; margin-right:42px;}
+#page5 #content .col-1 .col-2 { width:269px;}
+#page5 #content .col-2 { width:310px;}
+
+/*======= index-5.html =======*/
+#page6 #content .col-1 { width:605px; margin-right:27px;}
+#page6 #content .col-2 { width:310px;}
+
+
+/*=========================*/
+
+
+#footer { 
+	height:auto; clear:left;
+	padding:20px 20px; background:#FFFFFF; border-radius:10px; border-top:1px solid #dddddd
+}

@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css" />
+<script type="text/javascript">
+  bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+       
+ $(function() {
+$( "#datepicker" ).datepicker({ dateFormat: 'yy-mm-dd'});
+});  
+</script>
+
+    <div id="content">
+
+		<%= form_for [:admin, @latestinformation] , :html => { :multipart => true } do |f| %>
+		
+		  
+		  <div id="breadcrumb">
+		  	   <%= link_to "Latestinformations",admin_latestinformations_path %> &raquo; New
+		  </div>
+		  
+		  <p>
+		 	<%= f.label :published_on %>
+		  	<%= f.text_field :published_on,:id=>"datepicker",size:10 %>
+		  </p>
+		 
+		  <p>
+		    <%= f.label :description %>
+		    <%= f.text_area :description, :cols=>"200", :rows=>"20" %>
+		  </p>
+		  
+		 
+		  
+		  
+		  <%= render :partial =>"button" %>
+		
+		<% end %>
+		<%= link_to "back",:action=>"index"%>
+
+  </div>

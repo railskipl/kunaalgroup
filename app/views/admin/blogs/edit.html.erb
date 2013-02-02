@@ -1,0 +1,29 @@
+<script type="text/javascript">
+       bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+</script>
+
+    <div id="content">
+
+		<%= form_for [:admin, @blog] ,:url=>{:action =>'update',:id=>@blog.id}, :html => { :multipart => true } do |f| %>
+		
+		  
+		  <div id="breadcrumb">
+		  	   <%= link_to "Blogs", admin_blogs_path %> &raquo; New
+		  </div>
+		 
+		  <p>
+		    <%= f.label :description %>
+		    <%= f.text_area :description, :cols=>"80", :rows=>"15"%>
+		  </p>
+		  
+		   <p>
+		    <%= f.label :body %>
+		    <%= f.text_area :body, :cols=>"80", :rows=>"15"%>
+		  </p>
+		
+		
+		  <%= render :partial =>"button" %>
+		
+		<% end %>
+
+  </div>

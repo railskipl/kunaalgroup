@@ -1,0 +1,2 @@
+module Admin::LatestinformationsHelper
+end

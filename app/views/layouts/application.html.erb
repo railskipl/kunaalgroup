@@ -1,0 +1,93 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Kunal's Group</title>
+<%= stylesheet_link_tag   "ie6.css","layout.css","menu.css","style.css" %>
+ <%= javascript_include_tag "jcarousellite.js","jquery-1.4.2.min.js","menu.js","script.js" %>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/layout.css" rel="stylesheet" type="text/css" />
+<link href="css/menu.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="js/jcarousellite.js" type="text/javascript"></script>
+<script src="js/script.js" type="text/javascript"></script>
+<script src="js/menu.js" type="text/javascript"></script>
+
+<!--[if lt IE 7]>
+   <link href="css/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body id="page1" onload="new ElementMaxHeight()">
+<div id="main">
+   <!-- HEADER -->
+   <div id="header">
+   
+   <div class="header_row">
+   
+   <div class="logo"><a href="#"><img src="/assets/logo.png" alt="" border="0" /></a></div>
+   <div class="social"><a href="#"><img src="/assets/facebook.png" alt="" border="0" /></a> <a href="#"><img src="/assets/twitter.png" alt="" border="0" /></a> <a href="#"><img src="/assets/rss.png" alt="" border="0" /></a> <a href="#"><img src="/assets/youtube.png" alt="" border="0" /></a></div>
+   <div class="email">corporatesales@kunalinfotech.net   |   <span style="color:#e15f25">(+91) (712) (3010539)</span></div>
+   
+   </div>
+   
+   
+   
+   <div id="menu">
+<ul id="nav">
+
+    
+   
+    <li class="mainlevel" id="mainlevel_01"><a href="/"><img src="/assets/home.png" alt="" class="menuimg"/>Home</a>
+    
+    </li>
+    
+    <li class="mainlevel" id="mainlevel_02"><a href="#"><img src="/assets/info.png" alt="" class="menuimg"/>About Us</a>
+    <ul class="sub_nav_01">
+    
+    <li><a href="/pages/1">Kunal Infotech Pvt Ltd.</a></li>
+    <li><a href="/pages/2">Kunaal’s Housing </a></li>
+    <li><a href="/pages/3">Sunip Infrastructure</a></li>
+	  <li><a href="/pages/4">Vyankateshwara Charitable Trust</a></li>
+    
+
+    </ul>
+    </li> 
+       
+    <li class="mainlevel"><a href="#"><img src="/assets/chart_pie.png" alt="" class="menuimg"/>Services</a>
+    
+    </li>
+        
+    <li class="mainlevel"><a href="#"><img src="/assets/key.png" alt="" class="menuimg"/>Solutions</a><!--input an em tag as a space,IE is gread need-->
+    
+    </li>
+    
+    <li class="mainlevel"><a href="#"><img src="/assets/tools.png" alt="" class="menuimg"/>Products</a>
+    
+    </li>
+    
+    <li class="mainlevel"><a href="/contact"><img src="/assetsaddress_book.png" alt="" class="menuimg"/>Contact Us</a></li> 
+       
+    </ul>
+    </div>
+    </div>
+    
+    <div>
+	 <%= yield%>
+		
+		</div>	
+    
+    <!-- FOOTER -->
+ 
+   <div id="footer">
+     Copyright &copy; 2013 kunaalsgroup.com. All rights reserved.   |   <a href="#">Privacy policy
+   </a></div>
+</div>
+    
+    
+
+</div>
+</body>
+</html>
+

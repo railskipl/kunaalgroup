@@ -1,0 +1,65 @@
+ <!-- CONTENT -->
+   <div id="content">
+      
+      <div class="inner-box" style="padding:20px">
+	  
+	  <div class="page_title">Contact Us</div>
+	  
+	  <div class="col-inner">
+	  
+	  
+	  <div style="width:40%; height:auto; float:left">
+	    <p><strong>Kunaal's Group</strong><br>
+		55, Suyog Nagar, Ring Road, 
+  		Nagpur
+  		<br>
+  		<span class="orange">State:</span> Maharashtra <br>
+  		<span class="orange">Pin Code:</span> 440015 <br>
+  		<span class="orange">Country:</span> INDIA </p>
+	    <p><span class="heading">Email:</span> info@kunalinfotech.net<br />
+          <span class="heading">Telephone:</span>+91 712 3010539<br />
+          <span class="heading">Web:</span> www.kunaalsgroup.com</p>
+	  </div>
+	  
+	  
+	  <div style="width:40%; height:auto; float:left" ,src="/assets/logo2.png" alt="" border="0">
+	  
+	    <table width="100%" border="0" cellspacing="5" cellpadding="0"/>
+        
+  <%= form_for :contact, :url=>{:controller=>'contacts',:action=>'create'} do |f| %>
+			
+            <div>
+			 <%= f.label :Name %><br />							
+			<%= f.text_field :name,:class =>"tf"%>
+			</div>
+			
+			
+			<div>
+			 <%= f.label :Email %><br />								
+			<%= f.text_field :email,:class =>"tf"%>
+			</div>
+			
+			<div>
+			<%= f.label :Subject %><br />								
+			<%= f.text_field :subject,:class =>"tf"%>
+			</div>
+			
+			<div>
+			<%= f.label :Message %><br />									
+			<%= f.text_area :message,:cols => "30", :rows => "5",:class =>"tf"%>
+			</div>
+			
+		   <%= submit_tag 'Submit', :class=>"sbutton" %>
+		   
+			
+			<% end %>
+            </table>
+	   
+	     </div>
+	
+	
+        </div>
+         
+      </div>
+      
+   </div>

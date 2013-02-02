@@ -1,0 +1,31 @@
+<div id="content">
+ 	<p class='button'>
+ 		
+ 		<%= link_to  "Add Pages", new_admin_page_path, :class => 'button positive' %>
+ 		</p>
+		<p class='clear'></p>
+		   
+
+			<table class="admintable">
+			  <tr class="admintablehd">
+			    <td width="25%">Description</td>
+			    <td width="25%">Photo</td>
+			    <td width="25%">Body</td>
+			    <td width="27%" style="text-align: center !important;">Action</td>
+			  </tr>
+			
+			<% @pages.each do |page| %>
+			  <tr>
+			    <td><%= truncate(page.description, :length => 110).html_safe %> </td>
+			  	 <td><%= image_tag page.photo.url,  :width => "165", :height=>"100" %></td> 
+			  	 <td><%= truncate(page.body, :length => 110).html_safe %> </td>
+			   <td style="text-align: center !important;"> <%= link_to "Edit", edit_admin_page_path(page),:action=>"edit",:id=>page.id,:class=>'button positive' %> &nbsp;&nbsp; 
+				</td>
+				<td><%=link_to 'Destroy',:action=>"delete",:id=>page.id , :class=>'button positive' %></td>
+			     
+			  </tr>
+			<% end %>
+			</table>
+			<br />
+	
+</div>
